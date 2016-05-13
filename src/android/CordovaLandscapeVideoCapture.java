@@ -1,4 +1,4 @@
-package org.apache.cordova.videoeditor;
+package de.ergovia;
 
 import java.io.*;
 import java.net.URL;

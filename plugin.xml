@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-plugin-video-editor" version="1.0.8" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<plugin id="cordova-landscape-video-capture" version="1.0.8" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>CordovaLandscapeVideoCapture</name>
     <description>A plugin to capture and play Videos is landscape full screen mode.</description>
     <keywords>cordova,video,recorder,player</keywords>
@@ -34,12 +34,7 @@
         </config-file>
 
         <!-- add plugin class -->
-        <source-file src="src/android/CameraPreview.java" target-dir="src/com/marakana/android/videocapturedemo" />
-        <source-file src="src/android/VideoCaptureActivity.java" target-dir="src/com/marakana/android/videocapturedemo" />
-        <source-file src="src/android/VideoPlaybackActivity.java" target-dir="src/com/marakana/android/videocapturedemo" />
-
-        <source-file src="src/android/layout/video_capture.xml" target-dir="res/layout"/>
-        <source-file src="src/android/layout/video_playback.xml" target-dir="res/layout"/>
+        <source-file src="src/android/CordovaLandscapeVideoCapture.java" target-dir="src/de/ergovia" />
 
         <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
     </platform>
