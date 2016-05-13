@@ -1,0 +1,1 @@
+# cordova-landscape-video-capture
