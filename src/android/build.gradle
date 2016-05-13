@@ -1,0 +1,14 @@
+repositories{
+    jcenter()
+}
+
+dependencies {
+    compile 'com.afollestad:material-camera:0.2.9'
+}
+
+android {
+    packagingOptions {
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+    }
+}

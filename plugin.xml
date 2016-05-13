@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-video-editor" version="1.0.8" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>CordovaLandscapeVideoCapture</name>
+    <description>A plugin to capture and play Videos is landscape full screen mode.</description>
+    <keywords>cordova,video,recorder,player</keywords>
+    <repo>https://github.com/ergovia-mobile/cordova-landscape-video-capture.git</repo>
+    <license>Apache 2.0</license>
+
+
+    <js-module name="CordovaLandscapeVideoCapture" src="www/CordovaLandscapeVideoCapture.js">
+        <clobbers target="CordovaLandscapeVideoCapture" />
+    </js-module>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <!-- android -->
+    <platform name="android">
+
+        <config-file target="config.xml" parent="/*">
+            <feature name="CordovaLandscapeVideoCapture">
+                <param name="android-package" value="org.apache.cordova.videoeditor.VideoEditor" />
+            </feature>
+            <activity android:name="de.ergovia.LandscapeVideoCapture"
+                      android:label="@string/app_name">
+            </activity>
+            <activity
+                    android:name="com.afollestad.materialcamera.CaptureActivity"
+                    android:theme="@style/MaterialCamera.CaptureActivity" />
+            <activity
+                    android:name="com.afollestad.materialcamera.CaptureActivity2"
+                    android:theme="@style/MaterialCamera.CaptureActivity" />
+        </config-file>
+
+        <!-- add plugin class -->
+        <source-file src="src/android/CameraPreview.java" target-dir="src/com/marakana/android/videocapturedemo" />
+        <source-file src="src/android/VideoCaptureActivity.java" target-dir="src/com/marakana/android/videocapturedemo" />
+        <source-file src="src/android/VideoPlaybackActivity.java" target-dir="src/com/marakana/android/videocapturedemo" />
+
+        <source-file src="src/android/layout/video_capture.xml" target-dir="res/layout"/>
+        <source-file src="src/android/layout/video_playback.xml" target-dir="res/layout"/>
+
+        <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
+    </platform>
+
+    <!-- ios
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="VideoEditor">
+                <param name="ios-package" value="VideoEditor"/>
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/VideoEditor.h" />
+        <source-file src="src/ios/VideoEditor.m" />
+
+        <header-file src="src/ios/SDAVAssetExportSession.h" />
+        <source-file src="src/ios/SDAVAssetExportSession.m" />
+
+        <framework src="AssetsLibrary.framework" />
+        <framework src="AVFoundation.framework" />
+        <framework src="MediaPlayer.framework" />
+        <framework src="CoreVideo.framework" />
+    </platform>
+    -->
+
+</plugin>

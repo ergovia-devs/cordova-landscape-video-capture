@@ -1,0 +1,39 @@
+{
+  "name": "cordova-landscape-video-capture",
+  "version": "0.0.1",
+  "description": "Cordova Landscape Video Capture Plugin",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "cordova": {
+    "id": "cordova-landscape-video-capture",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "video",
+    "recorder",
+    "player",
+    "cordova",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ergovia-mobile/cordova-landscape-video-capture.git"
+  },
+  "contributors": [
+    {
+      "name": "ergovia-mobile",
+      "web": "http://www.ergovia.de",
+      "email": "mobile@ergovia.de"
+    }
+  ],
+  "keywords": [],
+  "author": "ergovia-mobile",
+  "license": "Apache 2.0"
+}
