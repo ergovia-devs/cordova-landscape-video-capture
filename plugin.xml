@@ -27,6 +27,7 @@
                     android:name="com.afollestad.materialcamera.CaptureActivity2"
                     android:theme="@style/MaterialCamera.CaptureActivity"
                     android:screenOrientation="landscape"/>
+            <activity android:name="de.ergovia.VideoPlaybackActivity" android:theme="@style/MaterialCamera.CaptureActivity" />
         </config-file>
 
         <config-file target="config.xml" parent="/*">

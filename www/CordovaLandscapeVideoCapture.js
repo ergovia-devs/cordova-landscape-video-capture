@@ -30,3 +30,5 @@ CordovaLandscapeVideoCapture.prototype.playVideo = function(success, error, opti
   };
   exec(win, error, pluginName, 'playVideo', [options]);
 };
+
+module.exports = new CordovaLandscapeVideoCapture();
