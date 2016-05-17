@@ -18,19 +18,21 @@
     <!-- android -->
     <platform name="android">
 
-        <config-file target="config.xml" parent="/*">
-            <feature name="CordovaLandscapeVideoCapture">
-                <param name="android-package" value="org.apache.cordova.videoeditor.VideoEditor" />
-            </feature>
-            <activity android:name="de.ergovia.LandscapeVideoCapture"
-                      android:label="@string/app_name">
-            </activity>
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
             <activity
                     android:name="com.afollestad.materialcamera.CaptureActivity"
-                    android:theme="@style/MaterialCamera.CaptureActivity" />
+                    android:theme="@style/MaterialCamera.CaptureActivity"
+                    android:screenOrientation="landscape"/>
             <activity
                     android:name="com.afollestad.materialcamera.CaptureActivity2"
-                    android:theme="@style/MaterialCamera.CaptureActivity" />
+                    android:theme="@style/MaterialCamera.CaptureActivity"
+                    android:screenOrientation="landscape"/>
+        </config-file>
+
+        <config-file target="config.xml" parent="/*">
+            <feature name="CordovaLandscapeVideoCapture">
+                <param name="android-package" value="de.ergovia.CordovaLandscapeVideoCapture" />
+            </feature>
         </config-file>
 
         <!-- add plugin class -->
